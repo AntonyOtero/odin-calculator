@@ -1,6 +1,7 @@
-/*
-* Create a new function operate that takes an operator and 2 numbers and then calls one of the above functions on the numbers.
-*/
+
+const CALC = document.querySelector("#calc");
+const CALC_DISPLAY = document.querySelector("#calcDisplay");
+const CALC_MEMORY = [];
 
 const operations = {
     '+': (numOne, numTwo) => { return numOne + numTwo },
@@ -13,4 +14,13 @@ const operate = (operator, numOne, numTwo) => {
     return operations[operator](numOne, numTwo);
 };
 
-console.log(operate('+', 1, 2));
+const populateDisplay = () => {
+
+};
+
+CALC.querySelectorAll(".btn-primary").forEach( (btn) => {
+    btn.addEventListener("click", (event) => {
+        CALC_DISPLAY.innerText += event.target.innerText;
+        console.log(event.target.innerText);
+    });
+});

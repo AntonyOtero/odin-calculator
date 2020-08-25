@@ -3,53 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link rel="stylesheet" href="style.css">
+    <title>Odin Calculator</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@423&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 
 <body>
     
-    <div id="display">
-        Display
-    </div>
+    <div id="calc">
+        <div id="calcDisplay">
+            <!-- DISPLAY -->
+        </div>
+        
+        <div id="calcButtons">
+            <div class="rows">
+                <div class="row">
+                    <button class="btn btn-secondary">C</button>
+                </div>
+        
+                <div class="row">
+                    <button class="btn btn-primary">7</button>
+                    <button class="btn btn-primary">8</button>
+                    <button class="btn btn-primary">9</button>
+                </div>
+        
+                <div class="row">
+                    <button class="btn btn-primary">4</button>
+                    <button class="btn btn-primary">5</button>
+                    <button class="btn btn-primary">6</button>
+                </div>
+        
+                <div class="row">
+                    <button class="btn btn-primary">1</button>
+                    <button class="btn btn-primary">2</button>
+                    <button class="btn btn-primary">3</button>
+                </div>
+        
+                <div class="row">
+                    <button class="btn btn-primary btn-long">0</button>
+                    <button class="btn btn-primary">.</button>
+                </div>
+            </div>
+
+            <div class="column">
+                <button class="btn btn-utility">/</button>
+                <button class="btn btn-utility">*</button>
+                <button class="btn btn-utility">-</button>
+                <button class="btn btn-utility">+</button>
+                <button class="btn btn-utility">=</button>
+            </div>
     
-    <div id="calcButtons">
-
-<div>
-    <div>Clear</div>
-    <div>/</div>
-</div>
-
-<div>
-    <div>7</div>
-    <div>8</div>
-    <div>9</div>
-    <div>*</div>
-</div>
-
-<div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>-</div>
-</div>
-
-<div>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>+</div>
-</div>
-
-<div>
-    <div>0</div>
-    <div>.</div>
-    <div>=</div>
-</div>
-
+        </div>
     </div>
-    
     
     <script src="main.js"></script>
 </body>
