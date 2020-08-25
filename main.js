@@ -11,16 +11,44 @@ const operations = {
 };
 
 const operate = (operator, numOne, numTwo) => {
-    return operations[operator](numOne, numTwo);
+    let result = operations[operator](numOne, numTwo);
+     CALC_MEMORY.splice(0,3,result);    
+     CALC_DISPLAY.innerText = result;
 };
 
-const populateDisplay = () => {
 
-};
 
 CALC.querySelectorAll(".btn-primary").forEach( (btn) => {
     btn.addEventListener("click", (event) => {
         CALC_DISPLAY.innerText += event.target.innerText;
-        console.log(event.target.innerText);
+    });
+});
+
+
+CALC.querySelectorAll(".btn-operator").forEach( (btn)=>{
+    btn.addEventListener("click",(event) =>{
+        CALC_MEMORY.push(parseInt(CALC_DISPLAY.innerText));
+        CALC_MEMORY.push(event.target.innerText);
+        CALC_DISPLAY.innerText = "";
+        if(CALC_MEMORY.length == 4){
+            operate(CALC_MEMORY[1],CALC_MEMORY[0],CALC_MEMORY[2]);
+        };
+
+        console.log(CALC_MEMORY);
+
+    }); 
+      
+
+});
+
+
+CALC.querySelectorAll(".btn-equal").forEach( (btn)=>{
+    btn.addEventListener("click",(event) =>{
+        CALC_MEMORY.push(parseInt(CALC_DISPLAY.innerText));
+        if(CALC_MEMORY.length == 3){
+            operate(CALC_MEMORY[1],CALC_MEMORY[0],CALC_MEMORY[2]);
+        };
+
+        console.log(CALC_MEMORY);
     });
 });
