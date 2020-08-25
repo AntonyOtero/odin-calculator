@@ -12,7 +12,7 @@ body {
 #calc {
     padding: 15px;
     background: black;
-    border-radius: 5px;
+    border-radius: 7.5px;
 }
 
 #calcDisplay {
@@ -25,7 +25,6 @@ body {
 
 #calcButtons {
     display: flex;
-    /* background: red; */
 }
 
 .rows {
@@ -66,10 +65,16 @@ body {
 }
 
 .btn-secondary {
+    font-size: 1em;
     background-color: lightgray;
 }
 
 .btn-utility {
     color: white;
     background-color: orange;
+}
+
+.btn-active {
+    color: orange;
+    background-color: white;
 }
