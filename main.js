@@ -85,13 +85,15 @@ EQUAL_BTN.addEventListener("click", (event) => {
 
 
 CALC.querySelector("#clear-btn").addEventListener("click", (event) => {
-    if (CALC_DISPLAY.innerText && CALC_MEMORY[2]!=0 ){
-        CALC_MEMORY.length = 1;
-        CALC_DISPLAY.innerText = CALC_MEMORY[0];
-    }else if(CALC_DISPLAY.innerText && CALC_MEMORY[1]!=0){
-        CALC_MEMORY.length = 0;
-        CALC_DISPLAY.innerText =0;
-    }
-  
-  });
-  
+
+  if (CALC_DISPLAY.innerText && CALC_MEMORY.length == 0) {
+    CALC_DISPLAY.innerText = "";
+  } else if (CALC_DISPLAY.innerText && CALC_MEMORY.length == 1) {
+    CALC_MEMORY.length = 0;
+    CALC_DISPLAY.innerText = "";
+  } else if (CALC_DISPLAY.innerText && !CALC_MEMORY[2]) {
+    CALC_MEMORY.length = 1;
+    CALC_DISPLAY.innerText = CALC_MEMORY[0];
+  }
+
+});
