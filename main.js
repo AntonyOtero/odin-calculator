@@ -97,3 +97,10 @@ CALC.querySelector("#clear-btn").addEventListener("click", (event) => {
   }
 
 });
+
+CALC.querySelector("#backspace-btn").addEventListener("click", (event) => {
+  if (CALC_DISPLAY.innerText) {
+    CALC_DISPLAY.innerText = CALC_DISPLAY.innerText.split("").splice(0, CALC_DISPLAY.innerText.length - 1).join("")
+  }
+
+});

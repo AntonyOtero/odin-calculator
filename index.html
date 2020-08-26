@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odin Calculator</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@423&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <div id="calc">
-      <div id="calcDisplay"><!-- DISPLAY --></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odin Calculator</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@423&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-      <div id="calcButtons">
-        <div class="rows">
-          <div class="row">
-            <button class="btn btn-secondary" id="clear-btn">A/C</button>
-          </div>
-
-          <div class="row">
-            <button class="btn btn-primary btn-number">7</button>
-            <button class="btn btn-primary btn-number">8</button>
-            <button class="btn btn-primary btn-number">9</button>
-          </div>
-
-          <div class="row">
-            <button class="btn btn-primary btn-number">4</button>
-            <button class="btn btn-primary btn-number">5</button>
-            <button class="btn btn-primary btn-number">6</button>
-          </div>
-
-          <div class="row">
-            <button class="btn btn-primary btn-number">1</button>
-            <button class="btn btn-primary btn-number">2</button>
-            <button class="btn btn-primary btn-number">3</button>
-          </div>
-
-          <div class="row">
-            <button class="btn btn-primary btn-number btn-long">0</button>
-            <button class="btn btn-primary btn-decimal">.</button>
-          </div>
-        </div>
-
-        <div class="column">
-          <button class="btn btn-utility btn-operator">÷</button>
-          <button class="btn btn-utility btn-operator">×</button>
-          <button class="btn btn-utility btn-operator">-</button>
-          <button class="btn btn-utility btn-operator">+</button>
-          <button class="btn btn-utility btn-equal">=</button>
-        </div>
-      </div>
+<body>
+  <div id="calc">
+    <div id="calcDisplay">
+      <!-- DISPLAY -->
     </div>
 
-    <script src="main.js"></script>
-  </body>
+    <div id="calcButtons">
+      <div class="rows">
+        <div class="row">
+          <button class="btn btn-secondary" id="backspace-btn">b/s</button>
+          <button class="btn btn-secondary" id="clear-btn">A/C</button>
+        </div>
+
+        <div class="row">
+          <button class="btn btn-primary btn-number">7</button>
+          <button class="btn btn-primary btn-number">8</button>
+          <button class="btn btn-primary btn-number">9</button>
+        </div>
+
+        <div class="row">
+          <button class="btn btn-primary btn-number">4</button>
+          <button class="btn btn-primary btn-number">5</button>
+          <button class="btn btn-primary btn-number">6</button>
+        </div>
+
+        <div class="row">
+          <button class="btn btn-primary btn-number">1</button>
+          <button class="btn btn-primary btn-number">2</button>
+          <button class="btn btn-primary btn-number">3</button>
+        </div>
+
+        <div class="row">
+          <button class="btn btn-primary btn-number btn-long">0</button>
+          <button class="btn btn-primary btn-decimal">.</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <button class="btn btn-utility btn-operator">÷</button>
+        <button class="btn btn-utility btn-operator">×</button>
+        <button class="btn btn-utility btn-operator">-</button>
+        <button class="btn btn-utility btn-operator">+</button>
+        <button class="btn btn-utility btn-equal">=</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
 </html>

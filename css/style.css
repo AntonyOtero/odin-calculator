@@ -17,10 +17,12 @@ body {
 
 #calcDisplay {
     height: 1em;
+    padding: 15px;
     margin-bottom: 10px;
     font-size: 3.5em;
     text-align: right;
     color: white;
+    background-color: cadetblue;
 }
 
 #calcButtons {
