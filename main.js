@@ -10,10 +10,10 @@ const operations = {
   "-": (numOne, numTwo) => {
     return numOne - numTwo;
   },
-  "*": (numOne, numTwo) => {
+  "×": (numOne, numTwo) => {
     return numOne * numTwo;
   },
-  "/": (numOne, numTwo) => {
+  "÷": (numOne, numTwo) => {
     return numOne / numTwo;
   },
 };
