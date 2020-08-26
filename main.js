@@ -31,6 +31,7 @@ CALC.querySelectorAll(".btn-primary").forEach((btn) => {
         .querySelector(".btn-active")
         .setAttribute("class", "btn btn-utility");
     }
+    console.log(CALC_MEMORY);
   });
 });
 
@@ -48,14 +49,12 @@ CALC.querySelectorAll(".btn-operator").forEach((btn) => {
   });
 });
 
-CALC.querySelectorAll(".btn-equal").forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    CALC_MEMORY.push(parseInt(CALC_DISPLAY.innerText));
-    if (CALC_MEMORY.length == 3) {
-      operate(CALC_MEMORY[1], CALC_MEMORY[0], CALC_MEMORY[2]);
-    }
-    CALC_DISPLAY.innerText = CALC_MEMORY[0];
+CALC.querySelector(".btn-equal").addEventListener("click", (event) => {
+  CALC_MEMORY.push(parseInt(CALC_DISPLAY.innerText));
+  if (CALC_MEMORY.length == 3) {
+    operate(CALC_MEMORY[1], CALC_MEMORY[0], CALC_MEMORY[2]);
+  }
+  CALC_DISPLAY.innerText = CALC_MEMORY[0];
 
-    console.log(CALC_MEMORY);
-  });
+  console.log(CALC_MEMORY);
 });
