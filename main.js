@@ -26,7 +26,7 @@ const operate = (operator, numOne, numTwo) => {
   if (decRegex.test(result)) {
     result = result.toFixed(4);
   }
-  CALC_MEMORY.splice(0, 3, result);
+  CALC_MEMORY.splice(0, 3, Number(result));
 };
 
 CALC.querySelectorAll(".btn-number").forEach((btn) => {
