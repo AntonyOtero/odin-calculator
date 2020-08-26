@@ -31,6 +31,10 @@ const operate = (operator, numOne, numTwo) => {
 
 CALC.querySelectorAll(".btn-number").forEach((btn) => {
   btn.addEventListener("click", (event) => {
+    if (CALC_MEMORY.length == 1 && CALC_MEMORY[0] == CALC_DISPLAY.innerText) {
+      CALC_MEMORY.length = 0;
+      CALC_DISPLAY.innerText = "";
+    }
     CALC_DISPLAY.innerText += event.target.innerText;
     if (document.querySelector(".btn-active")) {
       document
