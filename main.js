@@ -58,3 +58,16 @@ CALC.querySelector(".btn-equal").addEventListener("click", (event) => {
 
   console.log(CALC_MEMORY);
 });
+
+
+CALC.querySelector("#clear-btn").addEventListener("click", (event) => {
+    if (CALC_DISPLAY.innerText && CALC_MEMORY[2]!=0 ){
+        CALC_MEMORY.length = 1;
+        CALC_DISPLAY.innerText = CALC_MEMORY[0];
+    }else if(CALC_DISPLAY.innerText && CALC_MEMORY[1]!=0){
+        CALC_MEMORY.length = 0;
+        CALC_DISPLAY.innerText =0;
+    }
+  
+  });
+  
